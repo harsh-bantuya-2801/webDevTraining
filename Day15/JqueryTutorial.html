@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQuery Tutorial</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#text").click(function(){
+                $(this).text("This is Jquery div, Click on me to change background color");
+                $("#btn").attr('disable','true');
+                $(this).click(function()
+                {
+                    $(this).css('background-color', 'red');
+                    $(this).css('color', 'white');
+                });
+            })
+            $("#btn").click(function(){
+                $(this).text("Click again");
+                $(this).css('background-color', 'red');
+            });
+            $("#btn").blur(function(){
+                $(this).text("This is blur tag");
+                $(this).css('background-color','yellow');
+            });
+            $("#btn").focus(function(){
+                $(this).text("This is focus tag");
+            });
+            $("#btn").keypress(function(){
+                $("#text").css('background-color','aqua');
+            });
+            
+        });
+    </script>
+
+</head>
+<body>
+    <div id="text">Click me</div>
+    <button id="btn" disabled="false" type="submit" name="Submit">Click me</button>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<html>
+<head>
+	<title>Array</title>
+</head>
+<body>
+	<p id="arr"></p>
+	<p id="arr_"></p>
+	<p id="arr__"></p>
+	<script>
+		const arr1 = new Array(1, 2, 3, 4);
+		document.getElementById("arr").innerHTML = arr1;
+		const arr2 = new Array(5, 6, 7, 8);
+		document.getElementById("arr_").innerHTML = arr2;
+		const concatenation = arr1.concat(arr2);
+		document.getElementById("arr__").innerHTML = concatenation;
+	</script>
+</body>
+
+</html>
