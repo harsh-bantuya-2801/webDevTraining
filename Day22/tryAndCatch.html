@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Try & Catch</title></head>
+<body>
+
+<h1>try & catch</h1>
+
+<p>enter number between 50 and 70:</p>
+
+<input id="d1" type="text">
+<button type="button" onclick="myFunction()">Test Input</button>
+<p id="p1"></p>
+
+<script>
+function myFunction() {
+  const message = document.getElementById("p1");
+  message.innerHTML = "";
+  let x = document.getElementById("d1").value;
+  try { 
+    if(x == "")  throw "empty";
+    if(isNaN(x)) throw "not a number";
+    x = Number(x);
+    if(x < 50)  throw "too low";
+    if(x > 70)   throw "too high";
+  }
+  catch(error) {
+    message.innerHTML = error;
+  }
+}
+</script>
+</body>
+</html>

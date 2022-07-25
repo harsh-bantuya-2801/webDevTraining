@@ -1,0 +1,39 @@
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <script type="text/javascript">
+        function internalAlert(){
+            alert('Hiii');
+        }
+        function internalConfirm(){
+            if (confirm("Internal confirm??")) {
+                alert('Yes');
+            } else {
+                alert('No');
+            }
+        }
+        function internalPrompt(){
+            var name = prompt("Enter internal prompt value");
+            alert('Hii ' + name);
+            document.write(name);
+            console.log(name);
+            console.error(name);
+        }
+    </script>
+    <script src="demo.js" type="text/javascript"></script>
+</head>
+<body>
+    <button onclick="alert('HIII')" name="inlineAlert" value="inlineAlert">Inline Alert</button>
+    <button onclick="confirm('Are you sure??')" name="inline" value="inline">Inline Confirm</button>
+    <button onclick="prompt('Enter Your Name')" name="inline" value="inline">Inline Prompt</button>
+    
+    <button onclick="internalAlert()" name="inlineAlert" value="inlineAlert">Internal Alert</button>
+    <button onclick="internalConfirm()" name="internalConfirm" value="internalConfirm">Internal Confirm </button>
+    <button onclick="internalPrompt()" name="internalPrompt" value="internalPrompt">Internal Prompt</button>
+    
+    <button onclick="externalAlert()" name="externalAlert" value="externalAlert">External Alert</button>
+    <button onclick="externalConfirm()" name="externalConfirm" value="externalConfirm">External Confirm </button>
+    <button onclick="externalPrompt()" name="externalPrompt" value="externalPrompt">External Prompt</button>
+</body>
+</html>
