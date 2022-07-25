@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Validation</title>
+    <style>
+        small {
+            color: red;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>     
+        var name_regex = /^([a-zA-Z]{2,20})$/;
+        var email_regex = /^\b[A-Z0-9._%-]+@[A-Z0-9.-]+\.[A-Z]{2,8}\b$/i;
+        var phone_regex = /^([0-9]{10})$/;
+        var password_regex = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[^\w\s]).{8,12}$/;
+        $(document).ready(function () {
+            $("#name").blur(function () {
+                var name = $(this).val();
+                if (name == "" || name == null) {
+                    $("#name_error").text("Name is required");
+                }
+                else {
+                    if (!name.match(name_regex)) {
+                        $("#name_error").text("Input error");
+                    } else {
+                        $("#name_error").empty;
+                    }
+                }
+            });
+            $("#email").blur(function () {
+                var email = $(this).val();
+                if (email == "" || email == null) {
+                    $("#email_error").text("Email is required");
+                }
+                else {
+                    if (!email.match(email_regex)) {
+                        $("#email_error").text("Input error");
+                    } else {
+                        $("#email_error").empty;
+                    }
+                }
+            });
+            $("#phone").blur(function () {
+                var phone = $(this).val();
+                if (phone == "" || phone == null) {
+                    $("#phone_").text("phone is required");
+                }
+                else {
+                    if (!phone.match(phone_regex)) {
+                        $("#phone_error").text("enter number only");
+                    } else {
+                        $("#phone_error").empty;
+                    }
+                }
+            });
+            $("#pass").blur(function () {
+                var pass = $(this).val();
+                if (pass == "" || pass == null) {
+                    $("#pass_").text("pass is required");
+                }
+                else {
+                    if (!pass.match(password_regex)) {
+                        $("#pass_error").text("Input error");
+                    } else {
+                        $("#pass_error").empty;
+                    }
+                }
+            });
+            $("#name").keypress(function (e) {
+                var kc = e.which
+                if ((kc >= 97 && kc <= 122) || (kc >= 65 && kc <= 90)) {
+                    $("#name_error").empty();
+                } else {
+                    $("#name_error").text("Enter valid key ");
+                }
+            });
+            $("#email").keypress(function (e) {
+                var kc = e.which
+                if ((kc >= 97 && kc <= 122) || (kc >= 65 && kc <= 90)) {
+                    $("#email_error").empty();
+                } else {
+                    $("#email_error").text("Enter valid key ");
+                }
+            });
+
+            $("#phone").keypress(function (e) {
+                var kc = e.which
+                if (kc >= 48 && kc <= 57) {
+                    $("#phone_error").empty();
+                } else {
+                    $("#phone_error").text("Enter valid key ");
+                }
+            });
+
+            $("#pass").keypress(function (e) {
+                var kc = e.which
+                if ((kc >= 97 && kc <= 122) || (kc >= 65 && kc <= 90)) {
+                    $("#pass_error").empty();
+                } else {
+                    $("#pass_error").text("Enter valid key ");
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+    Name: <input type="text" id="name" placeholder="Enter your name" /><br>
+    <small id="name_error"></small><br>
+    Email: <input type="text" id="email" placeholder="Enter your email" /><br>
+    <small id="email_error"></small><br>
+    Phone: <input type="text" id="phone" placeholder="Enter your phone" /><br>
+    <small id="phone_error"></small><br>
+    Password: <input type="password" id="pass" placeholder="Enter password" /><br>
+    <small id="pass_error"></small><br>
+    <button id="submitbtn">Submit</button>
+</body>
+
+</html>

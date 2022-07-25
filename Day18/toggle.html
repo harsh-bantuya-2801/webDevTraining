@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle</title>
+    <style>
+        #div{
+            height: 60px;
+            width: 60px;
+            background-color: blue;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#show").attr('disabled',true);
+            $("#hide").click(function () {
+                $(this).attr('disabled',true);
+                $("#show").attr('disabled',false);
+                $("#toggle").text("Show");
+                $("#div").hide(3000);
+            });
+            $("#show").click(function () {
+                $(this).attr('disabled',true);
+                $("#hide").attr('disabled',false);
+                $("#toggle").text("Hide");
+                $("#div").show(3000);
+            });
+            $("#toggle").click(function () {
+                if ($(this).text() =="Hide") {
+                $(this).text("Show");
+                $("#div").hide(3000);
+                $("#hide").attr('disabled',true);
+                $("#show").attr('disabled',false);
+                }
+                else {
+                $(this).text("Hide");
+                $("#div").show(3000);
+                $("#show").attr('disabled',true);
+                $("#hide").attr('disabled',false);
+                }
+            });
+            $("#plus").click(function () {
+                var nHeight = parseInt($("#div").css('height'));
+                var nWidth = parseInt($("#div").css('width'));
+                if (nHeight <= 600 && nWidth <= 600) {
+                    nHeight +=10;
+                    nWidth +=10;
+                    $("#div").css('height',nHeight);
+                    $("#div").css('width',nWidth);
+                } else {
+                    alert("You have reached the maximum height")
+                }
+            });
+            $("#minus").click(function () {
+                var nHeight = parseInt($("#div").css('height'));
+                var nWidth = parseInt($("#div").css('width'));
+                if (nHeight >= 50 && nWidth >= 50) {
+                    nHeight -=10;
+                    nWidth -=10;
+                    $("#div").css('height',nHeight);
+                    $("#div").css('width',nWidth);
+                } else {
+                    alert("You have reached the minimum height")
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div id="div"></div><br>
+    <button id="show">Show</button>
+    <button id="hide">Hide</button><br>
+    <button id="toggle">Hide</button><br>
+    <button id="plus">+</button>
+    <button id="minus">-</button>
+</body>
+</html>

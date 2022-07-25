@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <title>Sorting</title>
+    <style>
+        *{
+            background-color: aqua;
+        }
+        ul{
+            height: 100px;
+            width: 100%;
+            list-style-type: none;
+        }
+        li{
+            height: 20px;
+            width: 20px;
+        }
+    </style>
+    <script>
+         $(document).ready(function () {
+            $("#list,#list2").sortable({connectWith: "#list,#list2" });
+         });
+    </script>
+</head>
+<body>
+    <ul id="list">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+        <li>D</li>
+    </ul>
+    <ul id="list2">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</body>
+</html>

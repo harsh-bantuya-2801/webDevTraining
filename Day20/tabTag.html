@@ -1,0 +1,61 @@
+<!doctype html>  
+<html lang="en">  
+   <head>  
+      <meta charset="utf-8">  
+      <title>jQuery UI Tabs functionality</title>  
+      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+      <script>  
+         $(function() {  
+            $( "#tabs-5" ).tabs({  
+               heightStyle:"fill",  
+               collapsible:true,  
+               hide:"slideUp"  
+            });  
+         });  
+      </script>  
+      <style>  
+         #tabs-5{font-size: 14px;}  
+         .ui-widget-header {  
+            background:lightpink;  
+            border: 1px solid #b9cd6d;  
+            color: yellow;  
+            font-weight: bold;  
+         }  
+      </style>  
+   </head>  
+   <body>  
+      <div id="tabs-5">  
+         <ul>  
+            <li><a href="#tabs-6">Tab 1</a></li>  
+            <li><a href="#tabs-7">Tab 2</a></li>  
+            <li><a href="#tabs-8">Tab 3</a></li>  
+         </ul>  
+         <div id="tabs-6">  
+                        <p>Twinkle, twinkle, little star,<br/>  
+How I wonder what you are.<br/>  
+Up above the world so high,<br/>  
+Like a diamond in the sky.<br/>  
+Twinkle, twinkle, little star,<br/>  
+How I wonder what you are!<br/>  
+ </p>  
+  
+         </div>  
+         <div id="tabs-7">  
+           <p>Man said to God --- Why did you make women so beautiful?<br/>  
+God said to man --- So that you will love them.<br/>  
+Man said to God --- But why did you make them so dumb?<br/>   
+God said to man --- So that they will love you.<br/> </p>  
+  
+            </div>  
+         <div id="tabs-8">  
+                        <p>" The whole secret of existence is to have no fear."  
+Buddha</p>  
+  
+         </div>  
+      </div>  
+   </body>  
+</html>  
+
+ 

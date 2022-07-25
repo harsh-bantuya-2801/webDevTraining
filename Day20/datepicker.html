@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datepicker</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#datepicker").datepicker();
+            $("#week").datepicker({showWeek: true});      
+            $("#year").datepicker({yearSuffix: ' 2002'});      
+            $("#anim").datepicker({showAnim: "pulsate"});
+            // blind, bounce, clip, drop, explode, fade, fold, highlight,puff, pulsate, scale, shake, size, slide, transfer 
+        });
+    </script>
+</head>
+<body>
+    Simple Datepicker: <input type="text" id="datepicker" placeholder="dd/mm/yyyy"><br>
+    Week Datepicker: <input type="text" id="week" placeholder="dd/mm/yyyy"><br>
+    Year Suffix Datepicker: <input type="text" id="year" placeholder="dd/mm/yyyy"><br>
+    Animation Datepicker: <input type="text" id="anim" placeholder="dd/mm/yyyy"><br>
+</body>
+</html>

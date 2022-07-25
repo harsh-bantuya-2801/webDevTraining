@@ -1,0 +1,87 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Position</title>
+    <style type="text/css">
+        div{
+            width: 100%;
+            height: 50px;
+            background-color: aquamarine;
+        }
+        .static{
+            position: static;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            bottom: 0%;
+        }
+        .relative{
+            height: 100px;
+            width: 100px;
+            background: red;
+            animation: mymove 5s infinite ease-in-out;
+            position: relative;    
+        
+        }
+        .fixed{
+            position: fixed;
+            left: 0%;
+            right: 0%;
+
+            bottom: 0%;
+        }
+        .absolute{
+            position: absolute;
+            left: 0%;
+            right: 0%;
+            top: 0%;
+            bottom: 0%;
+        }
+        .sticky{
+            position: sticky;
+            left: 0%;
+            right: 0%;
+            top: 0%
+        }
+
+    </style>
+ </head>
+ <body>
+    
+    <div class="static">This is a div tag with position: Static</div>
+    <div>a</div>
+    <div>b</div>
+    <div>c</div>
+    <div>d</div>
+    <div>e</div>
+    <div>f</div>
+    <div class="relative">This is a div tag with position: Relative</div>
+    <div>g</div>
+    <div>h</div>
+    <div>i</div>
+    <div>j</div>
+    <div>k</div>
+    <div>l</div>
+    <div class="fixed">This is a div tag with position: Fixed</div>
+    <div>m</div>
+    <div>n</div>
+    <div>o</div>
+    <div>p</div>
+    <div>q</div>
+    <div>r</div>
+    <div class="sticky">This is a div tag with position: Sticky</div>
+    <div>s</div>
+    <div>t</div>
+    <div>u</div>
+    <div>v</div>
+    <div>w</div>
+    <div>x</div>
+    <div>y</div>
+    <div class="absolute">This is a div tag with position: Absolute</div>
+    <div>z</div>
+    
+ </body>
+ </html>

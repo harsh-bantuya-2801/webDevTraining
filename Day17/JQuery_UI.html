@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>JQuery UI</title>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <style>
+        div {
+            height: 100px;
+            width: 100px;
+            background-color: brown;
+            margin: 5px;
+        }
+        #div4{
+            height: 500px;
+            width: 500px;
+            background-color: aqua;
+        }
+        #div3{
+            height: 100px;
+            width: 100px;
+            background-color: darkorange;
+        }
+        div,
+        p {
+            cursor: move;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#div").draggable({axis: "x"});
+            $("#p").draggable({axis : "y"});
+            $("#div2").draggable({distance: 30, delay: 3000});
+            $("#div3").draggable({snap: 6});
+            $("#div4_").draggable({containment: "#div4"});
+            $("#div5").draggable({opacity: 0.5});
+            $("#span").draggable({scrollSensitivity: 2});
+            
+        });
+    </script>
+</head>
+
+<body>
+    <div id="div">x axis</div>
+    <p id="p">y axis</p>
+    <div id="div2">delay</div>
+    <div id="div3">snap</div>
+    <div id="div4">
+        <div id="div4_">containment</div>
+    </div>
+    <div id="div5">opacity</div>
+    <div id="div6"><span id="span">Scroll</span></div>
+
+</body>
+
+</html>

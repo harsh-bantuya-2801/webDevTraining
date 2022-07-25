@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Animation</title>
+		<style type="text/css">
+		div{border:2px; background-color:aqua; color:black; width:200px; height:100px; transition:0.1s;}
+		#translatediv:hover{
+			transform:translate(0px, 50px)
+		}
+		#opacitydiv:hover{opacity:0.3}
+		#rotatediv:hover{transform:rotate(165deg)}
+		#rotate3ddiv:hover{transform:rotate3d(50,60,90, 152deg)}
+		#rgbadiv:hover{color:rgba(255,25,45, 0.5)}
+		</style>
+		
+	</head>
+	<body>
+		<div id="translatediv">This is translate div</div><hr>
+		<div id="opacitydiv">This is opacity div</div><hr>
+		<div id="rotatediv">This is rotate div</div><hr>
+		<div id="rotate3ddiv">This is rotate3d div</div><hr>
+		<div id="rgbadiv">This is rgba div</div><hr>
+	</body>
+</html>

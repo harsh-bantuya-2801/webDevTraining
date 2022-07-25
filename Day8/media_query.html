@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Query</title>
+    <style type="text/css">
+        #D1{
+            background-color: aqua; height: 150px; width: 150px;
+        }
+        @media (min-width: 400px)
+        {
+            #D1{
+                background-color: blueviolet; height: 175px; width: 175px;
+            }
+        }
+        @media (min-width: 768px)
+        {
+            #D1{
+                background-color: green; height: 200px; width: 200px;
+            }
+        }
+        @media (min-width: 993px)
+        {
+            #D1{
+                background-color: orange; height: 250px; width: 250px;
+            }
+        }
+        @media (min-width: 1201px)
+        {
+            #D1{
+                background-color: red; height: 300px; width: 300px;
+            }
+        }
+        
+        /* #D1{
+            background-color: aqua; height: 100%; width: 100%;
+        }
+        @media (min-width: 300%)
+        {
+            #D1{
+                background-color: green; height: 100%; width: 85%;
+            }
+        }
+        @media (min-width: 400%)
+        {
+            #D1{
+                background-color: orange; height: 100%; width: 60%;
+            }
+        }
+        @media (min-width: 500%)
+        {
+            #D1{
+                background-color: red; height: 100%; width: 50%;
+            }
+        }  */
+       
+    </style>
+</head>
+<body>
+    <div id="D1">
+        This is a Media Query demo
+    </div>
+</body>
+</html>
