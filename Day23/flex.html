@@ -1,0 +1,139 @@
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex</title>
+
+    <style>
+        #flex-container {
+            background-color: rgb(182, 0, 0);
+            display: inline-flex;
+            height: auto;
+            width: auto;
+            border: 1px solid;
+
+        }
+
+        #flex-container1 {
+            background-color: rgb(182, 0, 0);
+            display: inline-flex;
+            height: auto;
+            width: auto;
+            border: 1px solid;
+            flex-direction: row;
+
+        }
+
+        #flex-container2 {
+            background-color: rgb(182, 0, 0);
+            display: inline-flex;
+            height: auto;
+            width: auto;
+            border: 1px solid;
+            flex-direction: column;
+
+        }
+
+        #item-1 {
+            background-color: rgb(176, 105, 5);
+            height: 55px;
+            width: 55px;
+            border: 1px solid;
+            text-align: center;
+        }
+
+        #item-2 {
+            background-color: rgb(176, 105, 5);
+            height: 55px;
+            width: 55px;
+            border: 1px solid;
+            text-align: center;
+        }
+
+        #item-3 {
+            background-color: rgb(176, 105, 5);
+            height: 55px;
+            width: 55px;
+            border: 1px solid;
+            text-align: center;
+        }
+
+        #item-4 {
+            background-color:rgb(176, 105, 5);
+            height: 55px;
+            width: 55px;
+            border: 1px solid;
+            text-align: center;
+        }
+
+        #flex-container3 {
+            background-color: rgb(182, 0, 0);
+            display: inline-flex;
+            height: auto;
+            width: auto;
+            border: 1px solid;
+            flex-direction: row-reverse;
+
+        }
+
+        #flex-container4 {
+            background-color: rgb(182, 0, 0);
+            display: inline-flex;
+            height: auto;
+            width: auto;
+            border: 1px solid;
+            flex-flow: row wrap;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column-reverse;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="flex-container">
+        <div id="Item-1">1</div>
+        <div id="Item-2">2</div>
+        <div id="Item-3">3</div>
+        <div id="Item-4">4</div>
+    </div>
+    <h2>Display Flex</h2>
+    <div id="flex-container1">
+        <div id="Item-1">1</div>
+        <div id="Item-2">2</div>
+        <div id="Item-3">3</div>
+        <div id="Item-4">4</div>
+    </div>
+
+    <h2>Display Flex-Column</h2>
+    <div id="flex-container2">
+        <div id="Item-1">1</div>
+        <div id="Item-2">2</div>
+        <div id="Item-3">3</div>
+        <div id="Item-4">4</div>
+    </div>
+
+    <h2>Display Flex-row reverse</h2>
+    <div id="flex-container3">
+        <div id="Item-1">1</div>
+        <div id="Item-2">2</div>
+        <div id="Item-3">3</div>
+        <div id="Item-4">4</div>
+    </div>
+
+    <h2>Display Flex-column reverse</h2>
+    <div id="flex-container4">
+        <div id="Item-1">1</div>
+        <div id="Item-2">2</div>
+        <div id="Item-3">3</div>
+        <div id="Item-4">4</div>
+
+
+    </div>
+</body>
+
+</html>
